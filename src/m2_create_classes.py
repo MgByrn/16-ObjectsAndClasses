@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   In m1 we looked at classes that you have seen before. Those are built-in
 #   classes that are simply a part of Python.
@@ -17,9 +17,13 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+class Pet:
+    def __init__(animal, name, age):
+        animal.name = name
+        animal.age = age
 
 ###############################################################################
-# TODO: 2. (2 pts)
+# DONE: 2. (2 pts)
 #
 #   For this _todo_, modify the class above to include a __str__() method. If
 #   performed on a Pet object with these properties:
@@ -39,6 +43,14 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+class Pet:
+    def __init__(animal, name, age):
+        animal.name = name
+        animal.age = age
+    def __str__(animal):
+        return f"Name: {animal.name}, Age: {animal.age}"
+p1 = Pet('Fido',4)
+print(p1)
 
 ###############################################################################
 # TODO: 3. (2 pts)
@@ -58,3 +70,20 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+class Pet:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"Name: {self.name}, Age: {self.age}"
+
+    def speak(self):
+        print(f"{self.name}: Bark! Bark! Bark!")
+
+p1 = Pet('Fido',4)
+print(p1)
+p1.speak()
+
+
+
